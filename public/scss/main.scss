@@ -1,0 +1,135 @@
+$card-width: 400px;
+$card-height: 500px;
+$bgc-front: grey;
+$bgc-inner: lightgrey;
+$open-btn-bgc: transparent;
+$open-btn-color: red;
+
+
+
+
+*, *:hover{
+	box-sizing: border-box;
+}
+.card-container {
+	position: relative;
+	-webkit-perspective: 2600px;
+}
+.card {
+	width: $card-width;
+	height: $card-height;
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+}
+
+// Card Front
+.card-front.outer {
+	background-color: $bgc-front;
+	z-index: 4;
+	position: absolute;
+	left: 50%;
+	margin-left: -$card-width/2;
+}
+.card-front.inner {
+	background-color: $bgc-inner;
+	z-index: 3;
+	position: relative;
+	left: 50%;
+	margin-left: -$card-width  - $card-width/2;
+	transform-origin: right;
+	-webkit-transform: rotateY(180deg);
+}
+.card-container:hover .card-front.inner {
+	transition: -webkit-transform 2s;
+	transform-origin: right;
+	-webkit-transform:  translateX($card-width/2) rotateY(20deg) ;
+}
+.card-container:hover .card-front.outer {
+	transition: -webkit-transform 2s;
+	transform-origin: left;
+	-webkit-transform:  translateX($card-width/2) rotateY(-160deg);
+}
+
+
+// Card Back
+.card-back.inner {
+	background-color: $bgc-inner;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 50%;
+	margin-left: -$card-width/2;
+}
+.card-back.outer {
+	display: none;
+	z-index: 1;
+	position: relative;
+	left: 50%;
+	margin-left: -$card-width  - $card-width/2;
+	transform-origin: right;
+	-webkit-transform: rotateY(180deg);
+}
+.card-container:hover .card-back.outer {
+	transition: -webkit-transform 2s;
+	transform-origin: right;
+	-webkit-transform:  translateX($card-width/2) rotateY(160deg) ;
+}
+.card-container:hover .card-back.inner {
+	transition: -webkit-transform 2s;
+	transform-origin: left;
+	-webkit-transform:  translateX($card-width/2) rotateY(-20deg);
+}
+
+
+// Open Card Button
+.open-card-btn {
+	position: absolute;
+	top: $card-height/2;
+	right: 5px;
+	background-color: $open-btn-bgc;
+	font-size: 26px;
+	color: $open-btn-color;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

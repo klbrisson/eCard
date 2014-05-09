@@ -1,0 +1,104 @@
+*,
+*:hover {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.card-container {
+  position: relative;
+  -webkit-perspective: 2600px;
+}
+
+.card {
+  width: 400px;
+  height: 500px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+}
+
+.card-front.outer {
+  background-color: grey;
+  z-index: 4;
+  position: absolute;
+  left: 50%;
+  margin-left: -200px;
+}
+
+.card-front.inner {
+  background-color: lightgrey;
+  z-index: 3;
+  position: relative;
+  left: 50%;
+  margin-left: -600px;
+  -webkit-transform-origin: right;
+  -ms-transform-origin: right;
+  transform-origin: right;
+  -webkit-transform: rotateY(180deg);
+}
+
+.card-container:hover .card-front.inner {
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  -webkit-transform-origin: right;
+  -ms-transform-origin: right;
+  transform-origin: right;
+  -webkit-transform: translateX(200px) rotateY(20deg);
+}
+
+.card-container:hover .card-front.outer {
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  -webkit-transform-origin: left;
+  -ms-transform-origin: left;
+  transform-origin: left;
+  -webkit-transform: translateX(200px) rotateY(-160deg);
+}
+
+.card-back.inner {
+  background-color: lightgrey;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 50%;
+  margin-left: -200px;
+}
+
+.card-back.outer {
+  display: none;
+  z-index: 1;
+  position: relative;
+  left: 50%;
+  margin-left: -600px;
+  -webkit-transform-origin: right;
+  -ms-transform-origin: right;
+  transform-origin: right;
+  -webkit-transform: rotateY(180deg);
+}
+
+.card-container:hover .card-back.outer {
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  -webkit-transform-origin: right;
+  -ms-transform-origin: right;
+  transform-origin: right;
+  -webkit-transform: translateX(200px) rotateY(160deg);
+}
+
+.card-container:hover .card-back.inner {
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  -webkit-transform-origin: left;
+  -ms-transform-origin: left;
+  transform-origin: left;
+  -webkit-transform: translateX(200px) rotateY(-20deg);
+}
+
+.open-card-btn {
+  position: absolute;
+  top: 250px;
+  right: 5px;
+  background-color: transparent;
+  font-size: 26px;
+  color: red;
+}
