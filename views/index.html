@@ -19,18 +19,25 @@
       <div>Header</div>
     </header>
     <div class="row">
-      <div id="main-col" class="small-12 columns">
+      <div id="main-col" class="small-10 small-centered columns">
         <div class="card-container">
           <div class="card-front card outer">
-            <div class="front-header">Text</div>
-            <div></div>
-            <button class="open-card-btn">❱</button>
+            <div class="txt-container">
+              <p class="lg-txt">Large Text</p>
+            </div>
+            <canvas id="myCanvas" width="300" height="300" style="border:1px solid #000"></canvas>
+            <button class="card-btn open-btn">❱</button>
           </div>
-          <div class="card-front card inner"></div>
+          <div class="card-front card inner">
+            <button class="card-btn close-btn">❰</button>
+          </div>
           <div class="card-back card inner"></div>
           <div class="card-back card outer"></div>
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/paperjs-v0.9.18/dist/paper-full.min.js"></script>
+    <script type="text/javascript" src="/js/cardFunctionality.js"></script>
   </body>
 </html>

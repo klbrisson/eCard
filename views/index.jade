@@ -1,13 +1,23 @@
 extends layout
 
 block content
-	div.row
-		div.small-12.columns#main-col
-			div.card-container
-				div.card-front.card.outer
-					div.front-header Text
-					div
-					button.open-card-btn ❱
-				div.card-front.card.inner
-				div.card-back.card.inner
-				div.card-back.card.outer
+	div.card-container
+
+		div.card-front.card.outer
+			div.txt-container
+				p.lg-txt Large Text
+			//- div.txt-container
+			//- 	p.md-txt Medium Text
+			//- div.txt-container
+			//- 	p.sm-txt Small Text
+			canvas(id="myCanvas" width="300" height="300" style="border:1px solid #000")
+			button.card-btn.open-btn ❱
+
+		div.card-front.card.inner
+			button.card-btn.close-btn ❰
+
+		div.card-back.card.inner
+		div.card-back.card.outer
+
+
+

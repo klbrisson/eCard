@@ -13,5 +13,16 @@ html(lang='en')
 					h1: a(href="#") My Site
 		header.header 
 			div Header
-		block content
+		//- ul.side-nav.sidebar
+		//- 	li: a(href="#") Link1
+		//- 	li: a(href="#") Link2
+		//- 	li: a(href="#") Link3
+		//- 	li: a(href="#") Link4
+		div.row
+			div.small-10.small-centered.columns#main-col
+				block content
+
+		script(type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+		script(type="text/javascript" src="/paperjs-v0.9.18/dist/paper-full.min.js")
+		script(type="text/javascript" src="/js/cardFunctionality.js")
 		
