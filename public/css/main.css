@@ -5,13 +5,16 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #000;
+.main-container {
+  background-color: #1C1726;
+  height: 100%;
 }
 
 .card-container {
   position: relative;
   -webkit-perspective: 2600px;
+  -moz-perspective: 2600px;
+
 }
 
 .card {
@@ -20,48 +23,55 @@ body {
   height: 500px;
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
+  -moz-transform-style: preserve-3d;
+  -moz-backface-visibility: hidden;
 }
 
 .card-front.outer {
-  background-color: aliceblue;
+  background-image: url("http://www.mothersday123.com/wp-content/uploads/2014/01/Happy-Mothers-Day-Flowers.jpg");
+  background-size: 750px;
   z-index: 4;
   position: absolute;
   left: 50%;
   margin-left: -200px;
+  color: #F0E6DD;
 }
 
 .card-front.inner {
-  background-color: whitesmoke;
+  background-color: #F0E6DD;
   z-index: 3;
   position: relative;
   left: 50%;
   margin-left: -600px;
   -webkit-transform-origin: right;
-  -ms-transform-origin: right;
   transform-origin: right;
+  -moz-transform-origin: right;
   -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
 }
 
 .open.card-front.inner {
   -webkit-transition: -webkit-transform 2s;
   transition: -webkit-transform 2s;
   -webkit-transform-origin: right;
-  -ms-transform-origin: right;
+  -moz-transform-origin: right;
   transform-origin: right;
   -webkit-transform: translateX(200px) rotateY(20deg);
+  -moz-transform: translateX(200px) rotateY(20deg);
 }
 
 .open.card-front.outer {
   -webkit-transition: -webkit-transform 2s;
   transition: -webkit-transform 2s;
   -webkit-transform-origin: left;
-  -ms-transform-origin: left;
+  -moz-transform-origin: left;
   transform-origin: left;
   -webkit-transform: translateX(200px) rotateY(-160deg);
+  -moz-transform: translateX(200px) rotateY(-160deg);
 }
 
 .card-back.inner {
-  background-color: whitesmoke;
+  background-color: #F0E6DD;
   position: absolute;
   z-index: 2;
   top: 0;
@@ -76,52 +86,70 @@ body {
   left: 50%;
   margin-left: -600px;
   -webkit-transform-origin: right;
-  -ms-transform-origin: right;
+  -moz-transform-origin: right;
   transform-origin: right;
   -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
 }
 
 .open.card-back.outer {
   -webkit-transition: -webkit-transform 2s;
   transition: -webkit-transform 2s;
+  -moz-transition: -moz-transform 2s;
   -webkit-transform-origin: right;
-  -ms-transform-origin: right;
+  -moz-transform-origin: right;
   transform-origin: right;
   -webkit-transform: translateX(200px) rotateY(160deg);
+  -moz-transform: translateX(200px) rotateY(160deg);
+
 }
 
 .open.card-back.inner {
   -webkit-transition: -webkit-transform 2s;
   transition: -webkit-transform 2s;
+  -moz-transition: -moz-transform 2s;
   -webkit-transform-origin: left;
   -ms-transform-origin: left;
   transform-origin: left;
+  -moz-transform-origin: left;
   -webkit-transform: translateX(200px) rotateY(-20deg);
+  -moz-transform: translateX(200px) rotateY(-20deg);
 }
 
 .card-btn {
   top: 250px;
   position: absolute;
   background-color: transparent;
-  font-size: 26px;
-  color: black;
+  font-size: 40px;
+  color: #F0E6DD;
+  width: 50px;
+  /*height: 50px;*/
+  border-radius: 50%;
 }
 
 .card-btn:hover {
-  background-color: transparent;
-  color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(240, 230, 221, 0.25);
+  /*color: rgba(0, 0, 0, 0.8);*/
 }
 
 .open-btn {
-  right: 5px;
+  right: -80px;
 }
 
 .close-btn {
-  left: 5px;
+  left: -80px;
 }
 
 .txt-container {
+  margin: 15% auto;
+  text-align: justify;
+  max-width: 70%;
+}
+
+.inner-txt-body {
   text-align: center;
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 .lg-txt {
@@ -144,4 +172,21 @@ body {
 
 .header {
   height: 100px;
+}
+
+.click-here {
+  color: #3C2552;
+  position: absolute;
+  max-width: 70px;
+  right: 0px;
+  top: 45%;
+}
+
+.click-here-arrow {
+  font-size: 30px;
+}
+
+.inner-img {
+  width: 100%;
+  opacity: 0.07;
 }
