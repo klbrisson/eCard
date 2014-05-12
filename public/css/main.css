@@ -174,18 +174,6 @@
   height: 100px;
 }
 
-.click-here {
-  color: #3C2552;
-  position: absolute;
-  max-width: 70px;
-  right: 0px;
-  top: 45%;
-}
-
-.click-here-arrow {
-  font-size: 30px;
-}
-
 .inner-img {
   width: 100%;
   opacity: 0.07;
