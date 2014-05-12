@@ -14,6 +14,6 @@ app.get('/', function(req, res) {
 var port = process.env.PORT || 6824;
 
 
-var server = app.listen(6824, function() {
+var server = app.listen(port, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });
